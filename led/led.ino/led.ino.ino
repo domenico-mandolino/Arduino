@@ -30,6 +30,7 @@ void loop() {
 
   // Gestion des différents cas
   switch (nbPress) {
+
     case 1:
       // Si la condition est vraie, la LED s'allume
       digitalWrite(ledPin, HIGH);
@@ -38,10 +39,12 @@ void loop() {
 
     case 2:
       // Si la condition est vraie, la LED reste allumée
+      
       digitalWrite(ledPin, HIGH);
       Serial.println('2');
       ledOn = true;
       break;
+    };
 
     case 3:
       // Si la condition est vraie, la LED clignote
@@ -49,8 +52,8 @@ void loop() {
         digitalWrite(ledPin, !digitalRead(ledPin));
         lastPressTime = millis();
         Serial.println('3');
-      }
       break;
+      };
   }
 
   // Détection d'un appui prolongé
